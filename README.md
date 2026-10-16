@@ -30,13 +30,9 @@ Then visit `http://localhost:8000` in your browser. JavaScript must be enabled. 
 
 The distributed game is intentionally built as one portable `index.html` file with embedded styles, script, and visual assets. There is no build step and no third-party runtime dependency.
 
-## Screenshots
+## Gameplay preview
 
-The following captures are rendered from the repository's HTML build.
-
-![Title screen](screenshots/title.png)
-
-![Beginning of gameplay](screenshots/gameplay.png)
+[View the playable game and artwork on itch.io](https://samykar.itch.io/the-last-message).
 
 ## Verification
 
