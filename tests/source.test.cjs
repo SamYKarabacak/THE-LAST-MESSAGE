@@ -21,7 +21,8 @@ const story = ctx.TLM_STORY, engine = ctx.TLM_ENGINE;
 
 test('The game has a title, creator credit and standalone HTML', () => {
  assert.match(html, /<title>THE LAST MESSAGE<\/title>/);
- assert.match(html, /Sam Y\. Karabacak/);
+ assert.match(html, /SamYKar/);
+ assert.match(html, /Game created by BravenDev/);
  assert.match(html, /<style>/);
  assert.ok(!/<script[^>]+src=/.test(html), 'No external scripts');
 });
