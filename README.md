@@ -48,7 +48,7 @@ The source contains the full story and all ending conditions, so expect spoilers
 
 ## Credits
 
-**Game created by BravenDev · Author: SamYKar**
+**Game created by SamYKar**
 
 © 2026 SamYKar. All rights reserved.
 See [COPYRIGHT.md](COPYRIGHT.md) for reuse information.
