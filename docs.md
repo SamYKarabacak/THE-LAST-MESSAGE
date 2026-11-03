@@ -1,26 +1,31 @@
-# Repository notes
+# Development notes
 
-## Game file
+## Source layout
 
-`index.html` contains the story, engine, interface, styles, and embedded visuals.
-The repository was imported from the existing offline release. Text edits are
-made in this file; it remains the entry point for local play.
+`index.html` is the complete game: story, state handling, interface, styles, visuals, and Web Audio sound. Edit it directly and open the same file to play. There is no build step.
+
+For consistent save storage while testing, serve the repository over HTTP:
+
+```sh
+python -m http.server 8000
+```
+
+Open `http://localhost:8000`. A file URL and a localhost URL may use different save storage.
 
 ## Tests
 
-Run `node --test tests/*.test.cjs` from the repository root.
+```sh
+node --test tests/*.test.cjs
+```
 
-The included smoke tests check JavaScript syntax, the story graph, all four
-endings, save restoration, and choice timing. Earlier release notes mentioned
-a separate 40-test development suite; those test files are not included here.
-The repository tests cover the checks listed above.
+The included suite checks script syntax, legal story transitions, reachability of all four endings, save restoration, and choice timing.
 
-## Screenshot captures
+Before a release, play through the game in a browser and check keyboard controls, audio, responsive layout, and save/reload behavior. The source tests do not cover those interactions.
 
-Earlier screenshots were rendered in Chromium through its document-content
-API. File and localhost navigation were unavailable during that capture session.
-The local-storage warning was hidden for the captures only; the game retained
-the warning and its normal storage handling.
+## Earlier screenshot captures
 
-Those captures do not verify file navigation, hosted saves, or browser/device
-compatibility. Check those in a running browser before a release.
+Earlier captures used Chromium's document-content API. The storage warning was hidden in those captures only; the game itself retained normal storage handling. Those images show layout and do not establish file-navigation, save, or device compatibility.
+
+## Rights
+
+See [COPYRIGHT.md](COPYRIGHT.md). The story and ending conditions are visible in the source, so expect spoilers.
